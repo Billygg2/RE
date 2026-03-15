@@ -1776,11 +1776,7 @@
             fl.addEventListener('touchstart', onFlTouch, { passive: false });
 
             flRaf = requestAnimationFrame(drawFL);
-            btn.ontouchend = function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                enterPuzzle1();
-            };
+
             flTimer = setInterval(() => {
                 flSecs--;
                 const bar = document.getElementById('fl-bar');
